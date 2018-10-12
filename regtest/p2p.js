@@ -52,7 +52,7 @@ describe('P2P Functionality', function () {
             bitcoind = require('../').services.Bitcoin({
                 spawn: {
                     datadir: datadir,
-                    exec: path.resolve(__dirname, '../bin/bitcoind')
+                    exec: path.resolve(__dirname, '../bin/zcoind')
                 },
                 node: {
                     network: bitcore.Networks.testnet
@@ -90,7 +90,7 @@ describe('P2P Functionality', function () {
                     network: regtestNetwork
                 });
 
-                blocks = 500;
+                blocks = 5;
 
                 log.info('Generating ' + blocks + ' blocks...');
 
