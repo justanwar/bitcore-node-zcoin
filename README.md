@@ -5,7 +5,7 @@ A Zcoin full node for building applications and services with Node.js. A node is
 
 ## Prerequisites
 
-- Zcoin Core (v0.13.4.x) with support for additional indexing *(see above)*
+- Zcoin Core (v0.13.6.x) with support for additional indexing *(see above)*
 - Node.js v0.10, v0.12, v4 or v5
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
 - ~20GB of disk storage
@@ -25,7 +25,7 @@ bitcore-node-zcoin start
 
 This will create a directory with configuration files for your node and install the necessary dependencies.
 
-Please note that [Zcoin Core v0.13.4.x](https://github.com/zcoinofficial/zcoin/tree/v0.13.4.x) will be downloaded automatically. Once completed the zcoind binary should be placed into the &lt;zcoin-data-dir&gt; folder specified during node creation.
+Please note that [Zcoin Core v0.13.6.x](https://github.com/zcoinofficial/zcoin/releases) will be downloaded automatically. Once completed the zcoind binary should be placed into the &lt;zcoin-data-dir&gt; folder specified during node creation.
 
 For more information about (and developing) services, please see the [Service Documentation](docs/services.md).
 
@@ -35,7 +35,6 @@ There are several add-on services available to extend the functionality of Bitco
 
 - [Insight API](https://github.com/zcoinofficial/insight-api-zcoin/tree/master)
 - [Insight UI](https://github.com/zcoinofficial/insight-ui-zcoin/tree/master)
-- [Bitcore Wallet Service](https://github.com/zcoinofficial/bitcore-wallet-service/tree/master)
 
 ## Documentation
 
