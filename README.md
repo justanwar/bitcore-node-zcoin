@@ -13,7 +13,7 @@ A Zcoin full node for building applications and services with Node.js. A node is
 
 ## Configuration
 
-Bitcore includes a Command Line Interface (CLI) for managing, configuring and interfacing with your Bitcore Node.
+A simple installation script is implemented in scripts/install-insight.sh. It was tested on Ubuntu 16.04 with NodeJS v4.9.1 and the bundled npm 2.15.11. The script uses the bitcore Command Line Interface (CLI) for managing, configuring and interfacing with your Bitcore Node.
 
 ```bash
 bitcore-node-zcoin create -d <zcoin-data-dir> mynode
