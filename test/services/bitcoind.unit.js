@@ -105,7 +105,7 @@ describe('Bitcoin Service', function() {
       var bitcoind = new BitcoinService(baseConfig);
       var methods = bitcoind.getAPIMethods();
       should.exist(methods);
-      methods.length.should.equal(21);
+      methods.length.should.equal(22);
     });
   });
 
