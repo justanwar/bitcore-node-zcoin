@@ -2788,7 +2788,7 @@ describe('Bitcoin Service', function() {
   describe('#_getTxidsFromMempool', function() {
     it('will not include duplicates', function() {
       var bitcoind = new BitcoinService(baseConfig);
-      sinon.stub(bitcoind, "getDetailedTransaction").callsArgWith(1, null, {height: -1, hash: 'txid0'});
+      sinon.stub(bitcoind, "getDetailedTransaction").callsArgWith(1, null, {height: -1, hash: 'txid0', inputSatoshis: 101});
       var deltas = [
         {
           txid: 'txid0',
@@ -2803,6 +2803,7 @@ describe('Bitcoin Service', function() {
       bitcoind._getTxidsFromMempool(deltas, function(err, result) {
         result.length.should.equal(2);
         result[0].txid.should.equal('txid0');
+        result[0].value.should.equal(101);
         result[1].txid.should.equal('txid0');
       });
     });
