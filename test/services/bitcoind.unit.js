@@ -2805,27 +2805,9 @@ describe('Bitcoin Service', function() {
   });
 
   describe('#_getTxidsFromMempool', function() {
-    it('will filter to txids', function() {
-      var bitcoind = new BitcoinService(baseConfig);
-      var deltas = [
-        {
-          txid: 'txid0',
-        },
-        {
-          txid: 'txid1',
-        },
-        {
-          txid: 'txid2',
-        }
-      ];
-      var txids = bitcoind._getTxidsFromMempool(deltas);
-      txids.length.should.equal(3);
-      txids[0].should.equal('txid0');
-      txids[1].should.equal('txid1');
-      txids[2].should.equal('txid2');
-    });
     it('will not include duplicates', function() {
       var bitcoind = new BitcoinService(baseConfig);
+      sinon.stub(bitcoind, "getDetailedTransaction").callsArgWith(1, null, {height: -1, hash: 'txid0'});
       var deltas = [
         {
           txid: 'txid0',
@@ -2837,10 +2819,11 @@ describe('Bitcoin Service', function() {
           txid: 'txid1',
         }
       ];
-      var txids = bitcoind._getTxidsFromMempool(deltas);
-      txids.length.should.equal(2);
-      txids[0].should.equal('txid0');
-      txids[1].should.equal('txid1');
+      bitcoind._getTxidsFromMempool(deltas, function(err, result) {
+        result.length.should.equal(2);
+        result[0].should.equal('txid0');
+        result[1].should.equal('txid0');
+      });
     });
   });
 
@@ -4610,6 +4593,7 @@ describe('Bitcoin Service', function() {
           spentIndex: 2,
           spentHeight: 100,
           valueSat: 100,
+          value: 100 / 1e8,
           scriptPubKey: {
             hex: '76a9140b2f0a0c31bfe0406b0ccc1381fdbe311946dadc88ac',
             asm: 'OP_DUP OP_HASH160 0b2f0a0c31bfe0406b0ccc1381fdbe311946dadc OP_EQUALVERIFY OP_CHECKSIG',
