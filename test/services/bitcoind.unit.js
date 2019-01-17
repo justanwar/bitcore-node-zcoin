@@ -2785,25 +2785,6 @@ describe('Bitcoin Service', function() {
     });
   });
 
-  describe('#_getBalanceFromMempool', function() {
-    it('will sum satoshis', function() {
-      var bitcoind = new BitcoinService(baseConfig);
-      var deltas = [
-        {
-          satoshis: -1000,
-        },
-        {
-          satoshis: 2000,
-        },
-        {
-          satoshis: -10,
-        }
-      ];
-      var sum = bitcoind._getBalanceFromMempool(deltas);
-      sum.should.equal(990);
-    });
-  });
-
   describe('#_getTxidsFromMempool', function() {
     it('will not include duplicates', function() {
       var bitcoind = new BitcoinService(baseConfig);
@@ -2821,8 +2802,8 @@ describe('Bitcoin Service', function() {
       ];
       bitcoind._getTxidsFromMempool(deltas, function(err, result) {
         result.length.should.equal(2);
-        result[0].should.equal('txid0');
-        result[1].should.equal('txid0');
+        result[0].txid.should.equal('txid0');
+        result[1].txid.should.equal('txid0');
       });
     });
   });
