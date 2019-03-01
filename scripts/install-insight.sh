@@ -17,8 +17,8 @@ $lib_name/bin/bitcore-node-zcoin create $node_name
 
 cd $node_name
 
-node_modules/bitcore-node-zcoin/bin/bitcore-node-zcoin install zcoinofficial/insight-ui-zcoin#testnet-utils
-node_modules/bitcore-node-zcoin/bin/bitcore-node-zcoin install zcoinofficial/insight-api-zcoin#testnet-utils
+node_modules/bitcore-node-zcoin/bin/bitcore-node-zcoin install zcoinofficial/insight-ui-zcoin
+node_modules/bitcore-node-zcoin/bin/bitcore-node-zcoin install zcoinofficial/insight-api-zcoin
 
 find . -name "zcore-lib" -type d -not -path "./node_modules/zcore-lib" | xargs rm -rf
 
