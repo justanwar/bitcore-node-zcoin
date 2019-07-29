@@ -23,7 +23,12 @@ describe('#defaultConfig', function() {
             datadir: path_module.join(process.cwd(), 'bin'),
             exec: expectedExecPath
           }
-        }
+        },
+    "insight-api-zcoin": {
+      "db": {
+        "url": "mongodb://localhost:27017/insight"
+      }
+    }	
       }
     }, null, 2);
     var defaultConfig = proxyquire('../../lib/scaffold/default-config', {
@@ -67,7 +72,12 @@ describe('#defaultConfig', function() {
             datadir: process.env.HOME + '/.bitcore/data',
             exec: expectedExecPath
           }
-        }
+        },
+    "insight-api-zcoin": {
+      "db": {
+        "url": "mongodb://localhost:27017/insight"
+      }
+    }
       }
     }, null, 2);
     var defaultConfig = proxyquire('../../lib/scaffold/default-config', {
