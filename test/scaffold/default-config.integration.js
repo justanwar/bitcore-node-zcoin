@@ -24,11 +24,17 @@ describe('#defaultConfig', function() {
             exec: expectedExecPath
           }
         },
-    "insight-api-zcoin": {
-      "db": {
-        "url": "mongodb://localhost:27017/insight"
-      }
-    }	
+        "insight-api-zcoin": {
+          "db": {
+            "url": "mongodb://localhost:27017/insight"
+          }
+        },
+        "postgres_db": {
+          "host": "localhost",
+          "database": "relblocks",
+          "user": "relblocks_ro",
+          "password": "relblocks"
+        }
       }
     }, null, 2);
     var defaultConfig = proxyquire('../../lib/scaffold/default-config', {
@@ -73,11 +79,17 @@ describe('#defaultConfig', function() {
             exec: expectedExecPath
           }
         },
-    "insight-api-zcoin": {
-      "db": {
-        "url": "mongodb://localhost:27017/insight"
-      }
-    }
+        "insight-api-zcoin": {
+          "db": {
+            "url": "mongodb://localhost:27017/insight"
+          }
+        },
+        "postgres_db": {
+          "host": "localhost",
+          "database": "relblocks",
+          "user": "relblocks_ro",
+          "password": "relblocks"
+        }
       }
     }, null, 2);
     var defaultConfig = proxyquire('../../lib/scaffold/default-config', {
