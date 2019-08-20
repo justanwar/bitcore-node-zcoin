@@ -1,0 +1,14 @@
+[Unit]
+Description=bitcore node with insight server
+Documentation=https://zcoin.io
+After=network.target
+
+[Service]
+Type=simple
+User=insight
+ExecStart=/home/insight/n/bitcore-node-zcoin.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

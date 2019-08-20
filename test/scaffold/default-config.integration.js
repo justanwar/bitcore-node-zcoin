@@ -23,6 +23,17 @@ describe('#defaultConfig', function() {
             datadir: path_module.join(process.cwd(), 'bin'),
             exec: expectedExecPath
           }
+        },
+        "insight-api-zcoin": {
+          "db": {
+            "url": "mongodb://localhost:27017/insight"
+          }
+        },
+        "postgres_db": {
+          "host": "localhost",
+          "database": "relblocks",
+          "user": "relblocks_ro",
+          "password": "relblocks"
         }
       }
     }, null, 2);
@@ -67,6 +78,17 @@ describe('#defaultConfig', function() {
             datadir: process.env.HOME + '/.bitcore/data',
             exec: expectedExecPath
           }
+        },
+        "insight-api-zcoin": {
+          "db": {
+            "url": "mongodb://localhost:27017/insight"
+          }
+        },
+        "postgres_db": {
+          "host": "localhost",
+          "database": "relblocks",
+          "user": "relblocks_ro",
+          "password": "relblocks"
         }
       }
     }, null, 2);
