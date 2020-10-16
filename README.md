@@ -13,7 +13,11 @@ A Zcoin full node for building applications and services with Node.js. A node is
 
 ## Quick Start 
 
-A simple installation script is implemented in scripts/install-insight.sh. It was tested on Ubuntu 16.04 with NodeJS v6.14.4 and the bundled npm 3.10.10.
+A simple installation script is implemented in scripts/install-insight.sh. It was tested on Ubuntu 16.04 with NodeJS v6.14.4 and the bundled npm 3.10.10. Here is a simple invocation example:
+```bash
+git clone git@github.com:zcoinofficial/bitcore-node-zcoin.git
+bitcore-node-zcoin/scripts/install-insight.sh
+```
 
 ## Configuration
 
