@@ -11,9 +11,18 @@ A Zcoin full node for building applications and services with Node.js. A node is
 - ~20GB of disk storage
 - ~1GB of RAM
 
-## Configuration
+## Quick Start 
 
-A simple installation script is implemented in scripts/install-insight.sh. It was tested on Ubuntu 16.04 with NodeJS v6.14.4 and the bundled npm 3.10.10. The script uses the bitcore Command Line Interface (CLI) for managing, configuring and interfacing with your Bitcore Node.
+A simple installation script is implemented in scripts/install-insight.sh. It was tested on Ubuntu 16.04 with NodeJS v6.14.4 and the bundled npm 3.10.10. Here is a simple invocation example:
+```bash
+git clone git@github.com:zcoinofficial/bitcore-node-zcoin.git
+bitcore-node-zcoin/scripts/install-insight.sh insight
+# Please modify your insight/bitcore-node-zcoin.json config before starting
+cd insight
+node_modules/bitcore-node-zcoin/bin/bitcore-node-zcoin start
+```
+
+## Configuration
 
 ```bash
 bitcore-node-zcoin create -d <zcoin-data-dir> mynode
