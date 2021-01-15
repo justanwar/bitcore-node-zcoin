@@ -830,7 +830,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getNetworkConfigPath().should.equal('testnet3/zcoin.conf');
+      bitcoind._getNetworkConfigPath().should.equal('testnet3/firo.conf');
     });
     it('will get default rpc port for regtest', function() {
       bitcore.Networks.enableRegtest();
@@ -844,7 +844,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getNetworkConfigPath().should.equal('regtest/zcoin.conf');
+      bitcoind._getNetworkConfigPath().should.equal('regtest/firo.conf');
     });
   });
 
