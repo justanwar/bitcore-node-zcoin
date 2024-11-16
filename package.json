@@ -6,7 +6,7 @@
     "main": "./index.js",
     "repository": {
         "type": "git",
-        "url": "git@github.com:firoorg/bitcore-node-zcoin.git"
+        "url": "git@github.com:justanwar/bitcore-node-zcoin.git"
     },
     "homepage": "https://github.com/firoorg/bitcore-node-zcoin",
     "bugs": {
