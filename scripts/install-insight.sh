@@ -18,7 +18,7 @@ $lib_name/bin/bitcore-node-zcoin create $node_name
 cd $node_name
 
 node_modules/bitcore-node-zcoin/bin/bitcore-node-zcoin install firoorg/insight-ui-zcoin
-node_modules/bitcore-node-zcoin/bin/bitcore-node-zcoin install firoorg/insight-api-zcoin
+node_modules/bitcore-node-zcoin/bin/bitcore-node-zcoin install justanwar/insight-api-zcoin
 
 find . -name "zcore-lib" -type d -not -path "./node_modules/zcore-lib" | xargs rm -rf
 
